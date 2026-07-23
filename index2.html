@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="header">
+    <div class="profile">
+
+        <img src="./téléchargement (5).jpg" alt="Profile Picture" class="profile-img">
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">About</a></li>
+    </div>
+   </div>
+
+   <div class="section1">
+    <div class="part1">
+        <img id="img" src="./IMG-20260628-WA0016.jpg" alt="image1" height="500px" class="img">
+    </div>
+    <div class="part2">
+        <h1>Hi, I'm Your Name</h1>
+        <p>I'm a web developer and designer. I create beautiful and 
+            functional websites that help businesses grow online.</p>
+        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>I'm a web developer and designer. I create beautiful and 
+            functional websites that help businesses grow online.</p>
+        
+        <button id="btn">read more..</button>           
+        <p class="hid" style="color: blue" >orem ipsum dolor sit amet, consectetur adipiscing elit. Sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum, dolor sit amet 
+            consectetur adipisicing elit. Qui commodi corporis quod quasi recusandae ab.
+             Optio vero quisquam ad eum in ipsum maxime, commodi, facilis dolor similique </p>
+        
+       
+   </div>
+    </div>
+   <div class="section2">
+   
+    <div class="part1">
+        <h1>Hi, I'm Your Name</h1>
+        <button id="bt">Read more...</button>
+        <p class="hd" style="color: blue; display: none;" >I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online. Lorem 
+            ipsum dolor sit, amet consectetur adipisicing elit. Iste necessitatibus
+             possimus iure dolore dolorem placeat nisi rerum officiis sequi 
+             perspiciatis, ea incidunt, similique nobis laboriosam cupiditate 
+             ipsa. Quaerat, numquam placeat.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <!-- <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p> -->
+    </div>
+        <div class="part2" >
+            <button id="bt1">see less...</button>
+        <img  src="./IMG-20260628-WA0016.jpg" alt="image1" class="img1" style="display: none;">
+    </div>
+   </div>
+    </div>
+    <div class="part1">
+        <h1>Hi, I'm Your Name</h1>
+        <button id="bt">Read more...</button>
+        
+    </div>
+        <div class="grid" id="imageGrid" >
+            <!-- <button id="bt1">see less...</button> -->
+        <img  src="./IMG-20260628-WA0016.jpg" alt="image1" class="img3">
+        <img  src="./img2.jpeg" alt="image1" class="img3" >
+    </div>
+   </div>
+    </div>
+
+    <!-- <script>
+        // console.log("hello world");
+        // window.alert("this is an alert message");
+        // window.alert("i like this");
+        let x;
+        let age=10;
+        let gpa=3;
+
+        console.log(`your age is ${age} years old`);
+        console.log(`your gpa is ${age}`);
+    </script> -->
+</body>
+<script>
+    const button = document.getElementById('bt')
+    const button1 = document.getElementById('bt1')
+    const hiden = document.querySelector('.hd')
+    const hide = document.querySelector('.img1')
+    const image = document.getElementById('img')
+
+
+    button.addEventListener('click', function () {
+        if (hiden.style.display === 'none'){
+            hiden.style.display = 
+            button.textContent = "Readless..."
+        }
+        else{
+            hiden.style.display = 'none'
+            button.textContent = "Read more..."
+        }
+    })
+
+//image
+
+    button1.addEventListener('click', function () {
+        if (hide.style.display === 'none'){
+            hide.style.display = 'block'
+            button1.textContent = "see more"
+            console.log("life")
+        }
+        else{
+            hide.style.display = 'none'
+            button1.textContent = "see less"
+        }
+    })
+
+    image.addEventListener('mouseenter', function() {
+        image.style.transform = "scale(1.1)"
+    })
+    image.addEventListener('mouseleave', function() {
+        image.style.transform = "scale(1)"
+    })
+
+   document.getElementById('imageGrid').addEventListener('click', function (event) {
+  const clickedImg = event.target;
+
+  // Check if the click was on an <img> and that it's currently the first child in the grid
+  if (clickedImg.tagName === 'IMG' && clickedImg === this.firstElementChild) {
+    const nextImg = clickedImg.nextElementSibling;
+    if (nextImg) {
+      // Move the next image before the clicked one, effectively swapping them
+      this.insertBefore(nextImg, clickedImg);
+    }
+  }
+});
+
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="header">
+    <div class="profile">
+
+        <img src="./téléchargement (5).jpg" alt="Profile Picture" class="profile-img">
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">About</a></li>
+    </div>
+   </div>
+
+   <div class="section1">
+    <div class="part1">
+        <img src="./IMG-20260628-WA0016.jpg" alt="image1" height="500px" class="img">
+    </div>
+    <div class="part2">
+        <h1>Hi, I'm Your Name</h1>
+        <p>I'm a web developer and designer. I create beautiful and 
+            functional websites that help businesses grow online.</p>
+        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>I'm a web developer and designer. I create beautiful and 
+            functional websites that help businesses grow online.</p>
+        
+        <button id="btn">read more..</button>           
+        <p class="hide" style="color: blue">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum, dolor sit amet 
+            consectetur adipisicing elit. Qui commodi corporis quod quasi recusandae ab.
+             Optio vero quisquam ad eum in ipsum maxime, commodi, facilis dolor similique </p>
+        
+       
+   </div>
+    </div>
+   <div class="section2">
+   
+    <div class="part1">
+        <h1>Hi, I'm Your Name</h1>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <!-- <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p>
+        <p>I'm a web developer and designer. I create beautiful 
+            and functional websites that help businesses grow online.</p> -->
+    </div>
+        <div class="part2" style="display: none;">
+        <img src="./IMG-20260628-WA0016.jpg" alt="image1" class="img">
+    </div>
+   </div>
+    </div>
+
+    <!-- <script>
+        // console.log("hello world");
+        // window.alert("this is an alert message");
+        // window.alert("i like this");
+        let x;
+        let age=10;
+        let gpa=3;
+
+        console.log(`your age is ${age} years old`);
+        console.log(`your gpa is ${age}`);
+    </script> -->
+</body>
+<script>
+    const button = document.getElementById('btn')
+    const hiden = document.querySelector('.part2')
+
+
+    button.addEventListener('click', function () {
+        if (hiden.style.display === 'none'){
+            hiden.style.display = 'block'
+            button.textContent = "Readless..."
+        }
+    })
+</script>
+</html>
